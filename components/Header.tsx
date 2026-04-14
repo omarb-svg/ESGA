@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -37,42 +38,15 @@ export default function Header() {
         }}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            textDecoration: "none",
-          }}
-        >
-          <div
-            style={{
-              width: "36px",
-              height: "36px",
-              backgroundColor: "#c0392b",
-              borderRadius: "6px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <span style={{ color: "#fff", fontWeight: 800, fontSize: "16px" }}>
-              E
-            </span>
-          </div>
-          <div>
-            <span
-              style={{ color: "#fff", fontWeight: 700, fontSize: "18px", letterSpacing: "-0.3px" }}
-            >
-              ESGA
-            </span>
-            <span
-              style={{ color: "#94a3b8", fontSize: "11px", display: "block", lineHeight: 1 }}
-            >
-              Otomotiv
-            </span>
-          </div>
+        <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+          <Image
+            src="/logo.png"
+            alt="ESGA Otomotiv"
+            width={170}
+            height={52}
+            priority
+            style={{ height: "40px", width: "auto" }}
+          />
         </Link>
 
         {/* Desktop nav */}
